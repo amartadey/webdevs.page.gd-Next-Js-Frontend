@@ -4,12 +4,12 @@ import Image from "next/image";
 import config from "@/lib/config";
 
 
-const Footer = async ({menuData, customLogo}) => {
+const Footer = async ({ menuData, customLogo }) => {
 
-    
-    
+
+
     return (
-         <footer>
+        <footer>
             <div className="container">
                 <div className="footer-top-area">
                     <div className="row">
@@ -36,7 +36,7 @@ const Footer = async ({menuData, customLogo}) => {
                 <div className="footer-bottom-area">
                     <div className="footer-links">
                         <ul className="links">
-                            {menuData.menuItems.nodes.map(item=>(
+                            {menuData.menuItems.nodes.map(item => (
                                 <li key={item.id}>
                                     <Link href={normalizeUrl(item.path)}>{item.label}</Link>
                                 </li>

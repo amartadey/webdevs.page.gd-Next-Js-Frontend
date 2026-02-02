@@ -27,8 +27,8 @@ const author = siteSettings?.themes?.nodes?.[0].author.replace(/<[^>]*>/g, '')
 
 export const metadata = {
   title: `${siteSettings?.generalSettings?.title} | ${he.decode(
-  siteSettings?.generalSettings?.description || ""
-)}`,
+    siteSettings?.generalSettings?.description || ""
+  )}`,
   description: siteSettings?.generalSettings?.description,
   authors: [author ? { name: author } : { name: "Unknown" }],
   icons: {
@@ -41,35 +41,35 @@ const customLogo = siteSettings?.siteLogo || ""
 const mainMenu = await getMenuByLocation("main-menu")
 const footerMenu = await getMenuByLocation("footer-menu")
 
-const layout = ({children}) => {
- 
+const layout = ({ children }) => {
+
   return (
     <>
       <html lang="en">
-      <head>
-          
-          {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" /> */}
-      </head>
-      <body>
-        <Header  menuData={mainMenu} customLogo={customLogo}/>
-        {children}
-        <Footer menuData ={footerMenu} customLogo={customLogo}/>
+        <head>
 
-        <Script src="js/jquery-3.3.1.min.js" />
-        <Script src="js/jquery-ui.js" />
-        <Script src="js/owl.carousel.min.js" />
-        <Script src="js/jquery.counterup.min.js" />
-        <Script src="js/countdown.js" />
-        <Script src="js/stellarnav.min.js" />
-        <Script src="js/imagesloaded.pkgd.min.js" />
-        <Script src="js/isotope.pkgd.min.js" />
-        <Script src="js/jquery.magnific-popup.min.js" />
-        <Script src="js/jquery.scrollUp.js" />
-        <Script src="js/jquery.waypoints.min.js" />
-        <Script src="js/popper.min.js" />
-        <Script src="js/bootstrap.min.js" />
-        <Script src="js/theme.js" />
-      </body>
+          {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" /> */}
+        </head>
+        <body>
+          <Header menuData={mainMenu} customLogo={customLogo} />
+          {children}
+          <Footer menuData={footerMenu} customLogo={customLogo} />
+
+          <Script src="js/jquery-3.3.1.min.js" />
+          <Script src="js/jquery-ui.js" />
+          <Script src="js/owl.carousel.min.js" />
+          <Script src="js/jquery.counterup.min.js" />
+          <Script src="js/countdown.js" />
+          <Script src="js/stellarnav.min.js" />
+          <Script src="js/imagesloaded.pkgd.min.js" />
+          <Script src="js/isotope.pkgd.min.js" />
+          <Script src="js/jquery.magnific-popup.min.js" />
+          <Script src="js/jquery.scrollUp.js" />
+          <Script src="js/jquery.waypoints.min.js" />
+          <Script src="js/popper.min.js" />
+          <Script src="js/bootstrap.min.js" />
+          <Script src="js/theme.js" />
+        </body>
       </html>
     </>
   );
