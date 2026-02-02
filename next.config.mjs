@@ -10,9 +10,10 @@ const nextConfig = {
         protocol: 'http',
         hostname: 'amartadey.test',
       },
+      // Add your production WordPress domain here when deploying
       {
         protocol: 'https',
-        hostname: 'webdevs.page.gd',
+        hostname: 'dev.amartadey.com',
       },
     ],
     dangerouslyAllowSVG: true,
