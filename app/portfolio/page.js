@@ -3,6 +3,7 @@ import getPortfolioPage from "@/lib/queries/getPortfolioPage";
 import Image from "next/image"
 import Link from "next/link"
 import { Social, Testimonials } from "@/components/FrontendWidgets";
+import PortfolioImage from "@/components/PortfolioImage";
 
 export const dynamic = 'force-dynamic';
 
@@ -83,9 +84,9 @@ const portfolioPage = async () => {
                                                             return (
                                                                 <div key={imgs.altText + index} className="col-lg-6 col-sm-6" data-category="post-transition">
                                                                     <div className="h2-single-project">
-                                                                        <div className="img">
+                                                                        <div className="img" style={{ position: 'relative', minHeight: `${thumbnail.height}px` }}>
 
-                                                                            <Image src={thumbnail.sourceUrl} width={thumbnail.width} height={thumbnail.height} alt={imgs.altText} />
+                                                                            <PortfolioImage src={thumbnail.sourceUrl} width={thumbnail.width} height={thumbnail.height} alt={imgs.altText} />
                                                                         </div>
                                                                         <a href={imgs.mediaItemUrl} className="link test-popup-link" target="_blank"><span className="button"><i className="fas fa-mouse-pointer"></i></span></a>
                                                                         <div className="portfolio-details">
