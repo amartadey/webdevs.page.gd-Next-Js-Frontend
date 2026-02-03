@@ -17,6 +17,7 @@ import "../public/css/responsive.css";
 import { Playfair_Display } from 'next/font/google';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 
@@ -69,6 +70,7 @@ const layout = ({children}) => {
         <Script src="js/popper.min.js" />
         <Script src="js/bootstrap.min.js" />
         <Script src="js/theme.js" />
+        <SpeedInsights />
       </body>
       </html>
     </>
